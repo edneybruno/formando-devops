@@ -187,7 +187,9 @@ Autor: EDNEY BRUNO
 
     openssl x509 -req -in desafio.local.csr -CA /etc/ssl/certs/desafio.local.pem -CAkey /etc/ssl/certs/desafio.local.key -CAcreateserial -out server.crt -days 365 -sha256
 
-*Agora podemos solicitar a pagina HTTPS
+*Foi descomentado a parte de configuração do arquivo /etc/nginx/nginx/conf
+
+*Agora podemos solicitar a pagina HTTPS com a flag --cacert e informando o certificado.
 
     curl https://www.desafio.local --cacert /etc/pki/nginx/server.crt
 
